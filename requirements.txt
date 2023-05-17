@@ -2,5 +2,5 @@ django
 selenium
 pandas
 bs4
+lxml
 webdriver_manager
-openpyxl
