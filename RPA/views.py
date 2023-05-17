@@ -113,6 +113,7 @@ def UI(request):
             else:
                 return render(request, "index.html", {'message': 'No results for this company!'})        
         except Exception as e:
+            print(e)
             return render(request, "index.html", {'message': 'Something bad happened!'})
     else:    
         return render(request, "index.html")
