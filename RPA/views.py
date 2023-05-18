@@ -17,7 +17,10 @@ def UI(request):
             BFM = date.today() + relativedelta(months=-5)
             Company = request.POST['company']
             Chrome_options = webdriver.ChromeOptions()
-            #Chrome_options.add_argument('--headless=new')
+            Chrome_options.add_argument('--headless=new')
+            Chrome_options.add_argument('--no-sandbox')
+            Chrome_options.add_argument('window-size=1920x1080')
+            Chrome_options.add_argument('--disable-dev-shm-usage')
             chromedriver_path = '/usr/bin/chromedriver'
             driver = webdriver.Chrome(executable_path=chromedriver_path, options=Chrome_options)
             driver.maximize_window()
